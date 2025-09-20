@@ -1,5 +1,8 @@
 ---
-import "@/styles/global.css";
+import '@/styles/global.css';
+import { Image } from 'astro:assets';
+import heroImage from 'public/images/hero-image.png';
+import ecommerce from 'public/images/ecommerce-image.png';
 ---
 
 <html lang="en">
@@ -8,9 +11,214 @@ import "@/styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <link rel="stylesheet" href="/src/styles/fonts.css" />
+    <title>Charls Web Portfolio</title>
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      document.documentElement.classList.toggle(
+        'dark',
+        localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+      );
+      // Whenever the user explicitly chooses light mode
+      localStorage.theme = 'light';
+      // Whenever the user explicitly chooses dark mode
+      localStorage.theme = 'dark';
+      // Whenever the user explicitly chooses to respect the OS preference
+      localStorage.removeItem('theme');
+    </script>
   </head>
   <body>
-    <h1>Astro</h1>
+    <div class="bg-isabelline dark:bg-raisin-black flex w-full flex-col">
+      <div class="navbar bg-isabelline dark:bg-raisin-black shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-raisin-black dark:stroke-isabelline h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"></path>
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>About Me</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a
+            class="ml-4 hidden cursor-pointer rounded-sm duration-150 ease-in-out hover:bg-white/40 lg:flex">
+            <svg
+              class="size-8"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 120 120">
+              <rect width="120" height="120" rx="20" fill="none"></rect>
+              <path
+                d="M80 40a30 30 0 1 0 0 40"
+                fill="none"
+                stroke="#38bdf8"
+                stroke-width="10"
+                stroke-linecap="round"></path>
+              <circle cx="40" cy="60" r="6" fill="#facc15"></circle>
+            </svg>
+          </a>
+        </div>
+        <div class="navbar-center flex">
+          <ul class="menu menu-horizontal hidden px-1 lg:flex">
+            <li class="text-[#171A1F] dark:text-[#f0f3f9]"><a>Home</a></li>
+            <li class="text-[#171A1F] dark:text-[#f0f3f9]">
+              <a>About Me</a>
+            </li>
+            <li class="text-[#171A1F] dark:text-[#f0f3f9]">
+              <a>Portfolio</a>
+            </li>
+            <li class="text-[#171A1F] dark:text-[#f0f3f9]"><a>Contact</a></li>
+          </ul>
+          <svg
+            class="size-8 lg:hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 120 120">
+            <rect width="120" height="120" rx="20" fill="none"></rect>
+            <path
+              d="M80 40a30 30 0 1 0 0 40"
+              fill="none"
+              stroke="#38bdf8"
+              stroke-width="10"
+              stroke-linecap="round"></path>
+            <circle cx="40" cy="60" r="6" fill="#facc15"></circle>
+          </svg>
+        </div>
+        <div class="navbar-end">
+          <label class="flex cursor-pointer gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="stroke-raisin-black dark:stroke-isabelline"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path
+                d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+              ></path>
+            </svg>
+            <input
+              type="checkbox"
+              value="synthwave"
+              class="toggle bg-isabelline border-raisin-black dark:border-isabelline dark:bg-raisin-black theme-controller"
+              id="theme-controller"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="stroke-raisin-black dark:stroke-isabelline"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div class="flex h-full w-full flex-col">
+        <section class="flex flex-col px-4 py-6">
+          <h1
+            class="inter text-black-text dark:text-white-text mb-8 text-center text-4xl font-bold">
+            Hello, I'm Charls
+          </h1>
+          <h2
+            class="inter text-black-text dark:text-white-text mb-4 text-center text-3xl font-semibold">
+            Front-end Web Developer
+          </h2>
+          <p
+            class="open-sans text-neutral-text dark:text-white-text mb-6 text-center">
+            Crafting beautiful and functional digital experiences. With a
+            passion for clean design and intuitive interfaces, I bring ideas to
+            life through thoughtful visual solutions and robust code.
+          </p>
+          <button
+            class="open-sans btn btn-soft text-black-text bg-tertiary mb-4 rounded-xl border-0 text-lg"
+            >View My Work</button
+          >
+          <button
+            class="open-sans btn btn-soft mb-10 rounded-xl border-0 bg-neutral-500 text-lg text-teal-50 dark:bg-neutral-400"
+            >Contact Me</button
+          >
+          <Image src={heroImage} alt="office-guy-coding" class="rounded-xl" />
+        </section>
+        <section
+          class="flex flex-col bg-neutral-200 px-4 py-8 dark:bg-neutral-800">
+          <div class="flex flex-col">
+            <Image src={ecommerce} alt="e-commerce" class="rounded-t-xl" />
+            <div
+              class="flex flex-col items-start rounded-b-xl bg-[#f1f1f1] p-4 dark:bg-black/80">
+              <h4
+                class="text-black-text dark:text-white-text open-sans mb-3 text-lg font-semibold">
+                E-commerce Platform Redesign
+              </h4>
+              <div
+                class="mb-4 shrink-0 rounded-xl bg-neutral-200 px-3 text-center dark:bg-neutral-800">
+                <span
+                  class="text-black-text dark:text-white-text open-sans text-xs font-normal"
+                  >Web Development</span
+                >
+              </div>
+              <p
+                class="text-black-text dark:text-white-text open-sans mb-10 text-base font-normal">
+                Modernizing a retail platform for enhanced user experience and
+                conversion, focusing on responsive design and intuitive
+                navigation.
+              </p>
+              <button
+                class="btn ml-auto rounded-xl bg-neutral-100 px-4 py-2 text-neutral-800 dark:bg-neutral-900 dark:text-teal-50"
+                >View Project</button
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
+
+<script is:inline>
+  const themeController = document.getElementById('theme-controller');
+  themeController?.addEventListener('click', function () {
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+      if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      }
+
+      // if NOT set via local storage previously
+    } else {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    }
+  });
+</script>

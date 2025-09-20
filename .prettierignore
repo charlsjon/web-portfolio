@@ -1,0 +1,19 @@
+# Folders to ignore
+node_modules/
+.vscode/
+dist/
+build/
+
+# Astro generated output (if any)
+.astro/
+
+# Lock files (keep as-is for reproducibility)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Optional: if you don't want docs formatted
+README.md
+
+# Optional: if you prefer manual formatting for configs
+tsconfig.json
