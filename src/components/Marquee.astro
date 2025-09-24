@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets';
+import 'swiper/css';
+
+// Assumes images are in '/src/assets/images/'
+import astro from 'public/images/astro-svgrepo-com.svg';
+import js from 'public/images/js-svgrepo-com.svg';
+import tailwind from 'public/images/tailwind-svgrepo-com.svg';
+import react from 'public/images/react-svgrepo-com.svg';
+import bootstrap from 'public/images/bootstrap-svgrepo-com.svg';
+
+const icons = [
+  { src: astro, alt: 'Astro logo' },
+  { src: js, alt: 'JavaScript logo' },
+  { src: tailwind, alt: 'Tailwind CSS logo' },
+  { src: react, alt: 'React logo' },
+  { src: bootstrap, alt: 'Bootstrap logo' },
+];
+
+const marqueeIcons = [...icons];
+---
+
+<style>
+  .marquee-container {
+    margin-top: 1rem;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      white 10%,
+      white 90%,
+      transparent 100%
+    );
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-slide {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<div class="swiper marquee-container">
+  <div class="swiper-wrapper">
+    {
+      marqueeIcons.map((icon) => (
+        <div class="swiper-slide">
+          <Image
+            class="tooltip h-14 w-auto md:h-16"
+            src={icon.src}
+            alt={icon.alt}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay } from 'swiper/modules';
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Autoplay],
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 7000,
+    allowTouchMove: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 40,
+    breakpoints: {
+      768: {
+        spaceBetween: 60,
+      },
+      1024: {
+        spaceBetween: 80,
+      },
+    },
+  });
+</script>

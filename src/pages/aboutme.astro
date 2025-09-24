@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import TechStackSwiper from '@/components/TechStackSwiper.astro';
+import Marquee from '@/components/Marquee.astro';
+import aboutMeImg from 'public/images/A1.jpg';
+---
+
+<BaseLayout>
+  <main class="flex flex-col items-center px-4 py-8">
+    <Image src={aboutMeImg} alt="About Me" class="mb-6 w-24 rounded-full" />
+    <h1
+      class="text-black-text dark:text-white-text inter mb-3 text-center text-2xl font-bold">
+      Charlsjon Angelo Errazo
+    </h1>
+    <h6
+      class="open-sans mb-6 text-center text-base font-normal text-neutral-600 dark:text-neutral-200">
+      Computer Engineer | Front-end Web Developer
+    </h6>
+    <p
+      class="text-black-text dark:text-white-text open-sans mb-8 text-center text-sm font-normal">
+      Passionate about creating intuitive and engaging digital experiences,
+      blending robust development with thoughtful design.
+    </p>
+
+    <section
+      class="mb-8 flex flex-col rounded-xl bg-neutral-200 px-4 py-6 dark:bg-neutral-800">
+      <h3
+        class="inter text-black-text dark:text-white-text mb-4 text-xl font-semibold">
+        About My Journey
+      </h3>
+      <p
+        class="open-sans text-black-text dark:text-white-text text-base font-normal">
+        With over 8 years of experience in the tech industry, I've honed my
+        skills across various domains, from front-end development using modern
+        JavaScript frameworks to robust back-end systems. My journey started
+        with a fascination for how technology can solve real-world problems,
+        leading me to a career where I can design and build solutions that make
+        an impact. I thrive in collaborative environments and am constantly
+        seeking new challenges to expand my technical and creative horizons. My
+        work focuses on delivering elegant, scalable, and user-centric
+        solutions.
+      </p>
+    </section>
+
+    <section class="flex flex-col items-center">
+      <h1
+        class="inter text-black-text dark:text-white-text mb-4 text-center text-xl font-semibold">
+        Tech Stack
+      </h1>
+      <h3
+        class="inter mb-4 text-center text-lg font-semibold text-neutral-600 dark:text-neutral-200">
+        Front-end
+      </h3>
+      <Marquee />
+    </section>
+  </main>
+</BaseLayout>
