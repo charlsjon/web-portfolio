@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import TechStackSwiper from '@/components/TechStackSwiper.astro';
 import Marquee from '@/components/Marquee.astro';
 import aboutMeImg from 'public/images/A1.jpg';
 ---
@@ -43,15 +42,11 @@ import aboutMeImg from 'public/images/A1.jpg';
       </p>
     </section>
 
-    <section class="flex flex-col items-center">
+    <section class="flex w-full flex-col items-center">
       <h1
         class="inter text-black-text dark:text-white-text mb-4 text-center text-xl font-semibold">
         Tech Stack
       </h1>
-      <h3
-        class="inter mb-4 text-center text-lg font-semibold text-neutral-600 dark:text-neutral-200">
-        Front-end
-      </h3>
       <Marquee />
     </section>
   </main>

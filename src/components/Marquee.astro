@@ -8,6 +8,14 @@ import js from 'public/images/js-svgrepo-com.svg';
 import tailwind from 'public/images/tailwind-svgrepo-com.svg';
 import react from 'public/images/react-svgrepo-com.svg';
 import bootstrap from 'public/images/bootstrap-svgrepo-com.svg';
+import sveltia from 'public/images/sveltia.png';
+import go from 'public/images/go-svgrepo-com.svg';
+import figma from 'public/images/figma-svgrepo-com.svg';
+import framer from 'public/images/framer-svgrepo-com.svg';
+import git from '/public/images/git-svgrepo-com.svg';
+import github from 'public/images/github-color-svgrepo-com.svg';
+import ubuntu from 'public/images/ubuntu-svgrepo-com.svg';
+import terminal from 'public/images/terminal-svgrepo-com.svg';
 
 const icons = [
   { src: astro, alt: 'Astro logo' },
@@ -15,6 +23,14 @@ const icons = [
   { src: tailwind, alt: 'Tailwind CSS logo' },
   { src: react, alt: 'React logo' },
   { src: bootstrap, alt: 'Bootstrap logo' },
+  { src: sveltia, alt: 'Sveltia logo' },
+  { src: go, alt: 'Golangg logo' },
+  { src: figma, alt: 'Figma logo' },
+  { src: framer, alt: 'Framer logo' },
+  { src: git, alt: 'Git logo' },
+  { src: github, alt: 'Github logo' },
+  { src: ubuntu, alt: 'Ubuntu logo' },
+  { src: terminal, alt: 'Terminal logo' },
 ];
 
 const marqueeIcons = [...icons];
@@ -44,7 +60,7 @@ const marqueeIcons = [...icons];
   }
 </style>
 
-<div class="swiper marquee-container">
+<div class="swiper marquee-container w-full">
   <div class="swiper-wrapper">
     {
       marqueeIcons.map((icon) => (
@@ -69,19 +85,19 @@ const marqueeIcons = [...icons];
     slidesPerView: 'auto',
     loop: true,
     speed: 7000,
-    allowTouchMove: true,
+    allowTouchMove: false,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
     },
     spaceBetween: 40,
-    breakpoints: {
-      768: {
-        spaceBetween: 60,
-      },
-      1024: {
-        spaceBetween: 80,
-      },
-    },
+    // breakpoints: {
+    //   768: {
+    //     spaceBetween: 60,
+    //   },
+    //   1024: {
+    //     spaceBetween: 80,
+    //   },
+    // },
   });
 </script>
