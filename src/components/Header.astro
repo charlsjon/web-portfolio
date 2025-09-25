@@ -5,7 +5,10 @@ import ThemeIcon from './ThemeIcon.astro';
 <header class="navbar bg-isabelline dark:bg-raisin-black shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+      <div
+        tabindex="0"
+        role="button"
+        class="active:border-black-text dark:active:border-white-text shrink-0 rounded-lg border border-transparent px-2 py-2 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stroke-raisin-black dark:stroke-isabelline h-5 w-5"
@@ -20,7 +23,7 @@ import ThemeIcon from './ThemeIcon.astro';
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        class="menu menu-sm dropdown-content rounded-box text-black-text dark:text-white-text z-1 mt-3 w-52 bg-neutral-50 p-2 shadow dark:bg-neutral-700">
         <li><a href="/">Home</a></li>
         <li><a href="aboutme">About Me</a></li>
         <li><a>Portfolio</a></li>
