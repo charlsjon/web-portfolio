@@ -14,19 +14,24 @@ import Footer from '@/components/Footer.astro';
     <link rel="stylesheet" href="/src/styles/fonts.css" />
     <title>Charls Web Portfolio</title>
     <script is:inline>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      document.documentElement.classList.toggle(
-        'dark',
-        localStorage.theme === 'dark' ||
-          (!('theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
-      );
-      // Whenever the user explicitly chooses light mode
-      localStorage.theme = 'light';
-      // Whenever the user explicitly chooses dark mode
-      localStorage.theme = 'dark';
-      // Whenever the user explicitly chooses to respect the OS preference
-      localStorage.removeItem('theme');
+      const theme = (() => {
+        // 1. Check for a saved theme in localStorage
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme');
+        }
+        // 2. Check for the user's system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        // 3. Default to 'light'
+        return 'light';
+      })();
+
+      // Set the data-theme attribute on the <html> element
+      document.documentElement.setAttribute('data-theme', theme);
     </script>
   </head>
   <body>
