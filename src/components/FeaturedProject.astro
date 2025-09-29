@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 const { img, alt, title, tags, description, url } = Astro.props;
 ---
 
-<div class="flex flex-col">
+<div class="flex w-full flex-col rounded-xl shadow-sm">
   <Image src={ecommerce} alt={alt} class="rounded-t-xl" />
   <div
     class="flex flex-col items-start rounded-b-xl bg-[#f1f1f1] p-4 dark:bg-black/80">

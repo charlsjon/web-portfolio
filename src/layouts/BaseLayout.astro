@@ -37,7 +37,9 @@ import Footer from '@/components/Footer.astro';
   <body>
     <div class="bg-isabelline dark:bg-raisin-black flex w-full flex-col">
       <Header />
-      <slot />
+      <div class="mt-16 flex w-full flex-col">
+        <slot />
+      </div>
       <Footer />
     </div>
   </body>

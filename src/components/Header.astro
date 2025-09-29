@@ -2,13 +2,13 @@
 import ThemeIcon from './ThemeIcon.astro';
 ---
 
-<header class="navbar bg-isabelline dark:bg-raisin-black shadow-sm">
-  <div class="navbar-start">
+<header class="navbar bg-isabelline dark:bg-raisin-black fixed z-50 shadow-sm">
+  <nav class="navbar-start">
     <div class="dropdown">
       <div
         tabindex="0"
         role="button"
-        class="active:border-black-text dark:active:border-white-text shrink-0 rounded-lg border border-transparent px-2 py-2 lg:hidden">
+        class="btn btn-ghost btn-circle lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stroke-raisin-black dark:stroke-isabelline h-5 w-5"
@@ -46,8 +46,8 @@ import ThemeIcon from './ThemeIcon.astro';
         <circle cx="40" cy="60" r="6" fill="#facc15"></circle>
       </svg>
     </a>
-  </div>
-  <div class="navbar-center flex">
+  </nav>
+  <nav class="navbar-center flex">
     <ul class="menu menu-horizontal hidden px-1 lg:flex">
       <li class="text-[#171A1F] dark:text-[#f0f3f9]"><a href="/">Home</a></li>
       <li class="text-[#171A1F] dark:text-[#f0f3f9]">
@@ -71,7 +71,7 @@ import ThemeIcon from './ThemeIcon.astro';
         stroke-linecap="round"></path>
       <circle cx="40" cy="60" r="6" fill="#facc15"></circle>
     </svg>
-  </div>
+  </nav>
   <div class="navbar-end">
     <ThemeIcon />
   </div>
