@@ -10,31 +10,33 @@ import heroImage from 'public/images/hero-image.png';
   <div class="flex h-full w-full flex-col">
     <section class="flex flex-col px-4 py-6">
       <h1
-        class="inter text-black-text dark:text-white-text mb-8 text-center text-4xl font-bold">
+        class="inter text-black-text dark:text-white-text mt-6 mb-2 text-center text-3xl font-bold">
         Hello, I'm Charls
       </h1>
       <h2
-        class="inter text-black-text dark:text-white-text mb-4 text-center text-3xl font-semibold">
+        class="inter text-black-text dark:text-white-text mb-6 text-center text-2xl font-semibold">
         Front-end Web Developer
       </h2>
       <p
-        class="open-sans text-neutral-text dark:text-white-text mb-6 text-center">
+        class="open-sans text-neutral-text dark:text-white-text mb-6 text-center text-sm">
         Crafting beautiful and functional digital experiences. With a passion
         for clean design and intuitive interfaces, I bring ideas to life through
         thoughtful visual solutions and robust code.
       </p>
-      <button
-        class="open-sans btn btn-soft text-black-text bg-tertiary mb-4 rounded-xl border-0 text-lg"
-        >View My Work</button
+      <a
+        href="/portfolio"
+        class="open-sans btn btn-soft text-black-text bg-tertiary mb-4 rounded-xl border-0 text-base"
+        >View My Work</a
       >
-      <button
-        class="open-sans btn btn-soft mb-10 rounded-xl border-0 bg-neutral-500 text-lg text-teal-50 dark:bg-neutral-400"
-        >Contact Me</button
+      <a
+        href="/contact"
+        class="open-sans btn btn-soft mb-10 rounded-xl border-0 bg-neutral-500 text-base text-teal-50 dark:bg-neutral-400"
+        >Contact Me</a
       >
       <Image src={heroImage} alt="office-guy-coding" class="rounded-xl" />
     </section>
     <section
-      class="flex flex-col gap-6 bg-neutral-200 px-4 py-8 dark:bg-neutral-800">
+      class="flex flex-col gap-6 bg-neutral-200 px-4 py-10 dark:bg-neutral-800">
       <h1 class="inter mb-2 text-center text-2xl font-semibold">
         Featured Projects
       </h1>
