@@ -8,22 +8,24 @@ const { img, alt, title, tags, description, url } = Astro.props;
 <div class="flex w-full flex-col rounded-xl shadow-sm">
   <Image src={ecommerce} alt={alt} class="rounded-t-xl" />
   <div
-    class="flex flex-col items-start rounded-b-xl bg-[#f1f1f1] p-4 dark:bg-black/80">
-    <h4
-      class="text-black-text dark:text-white-text open-sans mb-3 text-lg font-semibold">
-      {title}
-    </h4>
-    <div
-      class="mb-4 shrink-0 rounded-xl bg-neutral-200 px-3 text-center dark:bg-neutral-800">
-      <span
-        class="text-black-text dark:text-white-text open-sans text-xs font-normal"
-        >{tags}</span
-      >
+    class="flex h-full flex-col justify-between rounded-b-xl bg-[#f1f1f1] p-4 dark:bg-black/80">
+    <div class="flex w-full flex-col items-start">
+      <h4
+        class="text-black-text dark:text-white-text open-sans mb-3 text-lg font-semibold">
+        {title}
+      </h4>
+      <div
+        class="mb-4 shrink-0 rounded-xl bg-neutral-200 px-3 text-center dark:bg-neutral-800">
+        <span
+          class="text-black-text dark:text-white-text open-sans text-xs font-normal"
+          >{tags}</span
+        >
+      </div>
+      <p
+        class="text-black-text dark:text-white-text open-sans mb-10 text-base font-normal">
+        {description}
+      </p>
     </div>
-    <p
-      class="text-black-text dark:text-white-text open-sans mb-10 text-base font-normal">
-      {description}
-    </p>
     <a
       href={url}
       class="btn ml-auto rounded-xl bg-neutral-100 px-4 py-2 text-neutral-800 dark:bg-neutral-900 dark:text-teal-50"

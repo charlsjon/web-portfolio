@@ -8,62 +8,74 @@ import heroImage from 'public/images/hero-image.png';
 
 <BaseLayout>
   <div class="flex h-full w-full flex-col">
-    <section class="flex flex-col px-4 py-6">
-      <h1
-        class="inter text-black-text dark:text-white-text mt-6 mb-2 text-center text-3xl font-bold">
-        Hello, I'm Charls
-      </h1>
-      <h2
-        class="inter text-black-text dark:text-white-text mb-6 text-center text-2xl font-semibold">
-        Front-end Web Developer
-      </h2>
-      <p
-        class="open-sans text-neutral-text dark:text-white-text mb-6 text-center text-sm">
-        Crafting beautiful and functional digital experiences. With a passion
-        for clean design and intuitive interfaces, I bring ideas to life through
-        thoughtful visual solutions and robust code.
-      </p>
-      <a
-        href="/portfolio"
-        class="open-sans btn btn-soft text-black-text bg-tertiary mb-4 rounded-xl border-0 text-base"
-        >View My Work</a
-      >
-      <a
-        href="/contact"
-        class="open-sans btn btn-soft mb-10 rounded-xl border-0 bg-neutral-500 text-base text-teal-50 dark:bg-neutral-400"
-        >Contact Me</a
-      >
-      <Image src={heroImage} alt="office-guy-coding" class="rounded-xl" />
+    <section class="flex flex-col px-4 py-6 sm:flex-row sm:gap-4 lg:gap-6">
+      <div class="flex w-full flex-col justify-center">
+        <h1
+          class="inter text-black-text dark:text-white-text mt-6 mb-2 text-center text-3xl font-bold sm:mt-0 sm:text-left lg:text-4xl">
+          Hello, I'm Charls
+        </h1>
+        <h2
+          class="inter text-black-text dark:text-white-text mb-6 text-center text-2xl font-semibold sm:text-left lg:text-3xl">
+          Front-end Web Developer
+        </h2>
+        <p
+          class="open-sans text-neutral-text dark:text-white-text mb-6 text-center text-sm sm:text-left lg:text-base">
+          Crafting beautiful and functional digital experiences. With a passion
+          for clean design and intuitive interfaces, I bring ideas to life
+          through thoughtful visual solutions and robust code.
+        </p>
+        <div
+          class="mb-10 flex w-full flex-col gap-4 sm:mb-0 sm:flex-row sm:gap-3">
+          <a
+            href="/portfolio"
+            class="open-sans btn btn-soft text-black-text bg-tertiary rounded-xl border-0 text-sm"
+            >View My Work</a
+          >
+          <a
+            href="/contact"
+            class="open-sans btn btn-soft rounded-xl border-0 bg-neutral-500 text-sm text-teal-50 dark:bg-neutral-400"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+      <Image
+        src={heroImage}
+        alt="office-guy-coding"
+        class="rounded-xl object-contain sm:max-w-[320px] md:max-w-[350px] lg:max-w-[400px]"
+      />
     </section>
     <section
       class="flex flex-col gap-6 bg-neutral-200 px-4 py-10 dark:bg-neutral-800">
       <h1 class="inter mb-2 text-center text-2xl font-semibold">
         Featured Projects
       </h1>
-      <FeaturedProject
-        img="ecommerce"
-        alt="ecommerce"
-        title="E-commerce Platform Redesign"
-        tags="Web Development"
-        description="Modernizing a retail platform for enhanced user experience and conversion, focusing on responsive design and intuitive navigation."
-        link="/"
-      />
-      <FeaturedProject
-        img="ecommerce"
-        alt="ecommerce"
-        title="Interactive SaaS Dashboard"
-        tags="UI/UX Design"
-        description="Building an intuitive data visualization tool for business analytics, featuring custom charts and real-time data updates."
-        link="/"
-      />
-      <FeaturedProject
-        img="ecommerce"
-        alt="ecommerce"
-        title="Personal Finance Mobile App"
-        tags="Product Design"
-        description="Designing a seamless mobile interface for a productivity application, incorporating gamification elements and secure transactions."
-        link="/"
-      />
+      <div
+        class="grid w-full grid-flow-row grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:grid-cols-3">
+        <FeaturedProject
+          img="ecommerce"
+          alt="ecommerce"
+          title="E-commerce Platform Redesign"
+          tags="Web Development"
+          description="Modernizing a retail platform for enhanced user experience and conversion, focusing on responsive design and intuitive navigation."
+          link="/"
+        />
+        <FeaturedProject
+          img="ecommerce"
+          alt="ecommerce"
+          title="Interactive SaaS Dashboard"
+          tags="UI/UX Design"
+          description="Building an intuitive data visualization tool for business analytics, featuring custom charts and real-time data updates."
+          link="/"
+        />
+        <FeaturedProject
+          img="ecommerce"
+          alt="ecommerce"
+          title="Personal Finance Mobile App"
+          tags="Product Design"
+          description="Designing a seamless mobile interface for a productivity application, incorporating gamification elements and secure transactions."
+          link="/"
+        />
+      </div>
     </section>
   </div>
 </BaseLayout>
