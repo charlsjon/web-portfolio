@@ -4,14 +4,14 @@ import FeaturedProject from '@/components/FeaturedProject.astro';
 ---
 
 <BaseLayout>
-  <div class="flex w-full flex-col px-4 py-6">
+  <div class="flex w-full flex-col items-center px-4 py-6">
     <h1 class="inter mb-4 text-center text-2xl font-semibold">Projects</h1>
     <p
-      class="text-black-text dark:text-white-text open-sans mb-10 text-center text-base font-normal">
+      class="text-black-text dark:text-white-text open-sans mb-10 max-w-3xl text-center text-base font-normal">
       A curated collection of my recent creative works, showcasing diverse
       skills and design approaches in web and mobile applications.
     </p>
-    <div class="flex w-full flex-col items-center gap-6">
+    <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <FeaturedProject
         img="ecommerce"
         alt="ecommerce"
