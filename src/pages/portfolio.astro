@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FeaturedProject from '@/components/FeaturedProject.astro';
+import lukslofts from 'public/images/lukslofts-website.png';
 ---
 
 <BaseLayout>
@@ -13,52 +14,42 @@ import FeaturedProject from '@/components/FeaturedProject.astro';
     </p>
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <FeaturedProject
-        img="ecommerce"
-        alt="ecommerce"
-        title="Modern Web Redesign"
+        img={lukslofts}
+        alt="luksloft-website"
+        title="Lukslofts Website"
         tags="Web Development"
-        description="A complete overhaul of a legacy e-commerce platform, focusing on user experience and conversion rates. Implemented with React and Tailwind CSS."
-        link="/"
+        description="A modern hotel website showcasing LuksLofts’ suites and amenities, with an integrated reservation experience for guests to easily book their stay."
+        url="https://www.lukslofts.com/"
       />
       <FeaturedProject
-        img="ecommerce"
         alt="ecommerce"
         title="Financial Tracking App"
         tags="Mobile App"
         description="Designed and developed a cross-platform mobile application for personal finance management, featuring intuitive charts and real-time data."
-        link="/"
       />
       <FeaturedProject
-        img="ecommerce"
         alt="ecommerce"
         title="Brand Identity Creation"
         tags="Branding"
         description="Developed a comprehensive brand identity package for a startup, including logo design, color palette, and typography guidelines."
-        link="/"
       />
       <FeaturedProject
-        img="ecommerce"
         alt="ecommerce"
         title="Interactive Data Dashboard"
         tags="Data Science"
         description="Created an interactive dashboard for visualizing complex business analytics, enabling users to explore trends and insights."
-        link="/"
       />
       <FeaturedProject
-        img="ecommerce"
         alt="ecommerce"
         title="UX Research Study"
         tags="UX/UI Design"
         description="Conducted extensive user research and usability testing to inform the redesign of a SaaS product, resulting in improved user satisfaction."
-        link="/"
       />
       <FeaturedProject
-        img="ecommerce"
         alt="ecommerce"
         title="E-commerce Platform"
         tags="Web Development"
         description="Developed a scalable e-commerce platform with a focus on seamless checkout experiences and robust inventory management."
-        link="/"
       />
     </div>
   </div>

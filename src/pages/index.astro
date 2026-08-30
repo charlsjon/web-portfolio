@@ -4,6 +4,7 @@ import FeaturedProject from '@/components/FeaturedProject.astro';
 
 import { Image } from 'astro:assets';
 import heroImage from 'public/images/hero-image.png';
+import lukslofts from 'public/images/lukslofts-website.png';
 ---
 
 <BaseLayout>
@@ -52,28 +53,24 @@ import heroImage from 'public/images/hero-image.png';
       <div
         class="grid w-full grid-flow-row grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:grid-cols-3">
         <FeaturedProject
-          img="ecommerce"
-          alt="ecommerce"
-          title="E-commerce Platform Redesign"
+          img={lukslofts}
+          alt="luksloft-website"
+          title="Lukslofts Website"
           tags="Web Development"
-          description="Modernizing a retail platform for enhanced user experience and conversion, focusing on responsive design and intuitive navigation."
-          link="/"
+          description="A modern hotel website showcasing LuksLofts’ suites and amenities, with an integrated reservation experience for guests to easily book their stay."
+          url="https://www.lukslofts.com/"
         />
         <FeaturedProject
-          img="ecommerce"
           alt="ecommerce"
           title="Interactive SaaS Dashboard"
           tags="UI/UX Design"
           description="Building an intuitive data visualization tool for business analytics, featuring custom charts and real-time data updates."
-          link="/"
         />
         <FeaturedProject
-          img="ecommerce"
           alt="ecommerce"
           title="Personal Finance Mobile App"
           tags="Product Design"
           description="Designing a seamless mobile interface for a productivity application, incorporating gamification elements and secure transactions."
-          link="/"
         />
       </div>
     </section>
