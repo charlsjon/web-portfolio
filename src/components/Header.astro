@@ -25,10 +25,12 @@ import ThemeIcon from './ThemeIcon.astro';
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content rounded-box text-black-text dark:text-white-text z-1 mt-3 w-52 bg-neutral-50 p-2 shadow dark:bg-neutral-700">
-          <li><a href="/web-portfolio">Home</a></li>
-          <li><a href="/web-portfolio/aboutme">About Me</a></li>
-          <li><a href="/web-portfolio/portfolio">Portfolio</a></li>
-          <li><a href="/web-portfolio/contact">Contact</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}`}>Home</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}aboutme`}>About Me</a></li>
+          <li>
+            <a href={`${import.meta.env.BASE_URL}portfolio`}>Portfolio</a>
+          </li>
+          <li><a href={`${import.meta.env.BASE_URL}contact`}>Contact</a></li>
         </ul>
       </div>
       <a
@@ -51,16 +53,16 @@ import ThemeIcon from './ThemeIcon.astro';
     <nav class="navbar-center flex">
       <ul class="menu menu-horizontal hidden px-1 lg:flex">
         <li class="text-[#171A1F] dark:text-[#f0f3f9]">
-          <a href="/web-portfolio">Home</a>
+          <a href={`${import.meta.env.BASE_URL}`}>Home</a>
         </li>
         <li class="text-[#171A1F] dark:text-[#f0f3f9]">
-          <a href="/web-portfolio/aboutme">About Me</a>
+          <a href={`${import.meta.env.BASE_URL}aboutme`}>About Me</a>
         </li>
         <li class="text-[#171A1F] dark:text-[#f0f3f9]">
-          <a href="/web-portfolio/portfolio">Portfolio</a>
+          <a href={`${import.meta.env.BASE_URL}portfolio`}>Portfolio</a>
         </li>
         <li class="text-[#171A1F] dark:text-[#f0f3f9]">
-          <a href="/web-portfolio/contact">Contact</a>
+          <a href={`${import.meta.env.BASE_URL}contact`}>Contact</a>
         </li>
       </ul>
       <svg
