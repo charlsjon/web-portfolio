@@ -28,12 +28,12 @@ import lukslofts from 'public/images/lukslofts-website.png';
         <div
           class="mb-10 flex w-full flex-col gap-4 sm:mb-0 sm:flex-row sm:gap-3">
           <a
-            href="web-portfolio/portfolio"
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/portfolio`}
             class="open-sans btn btn-soft text-black-text bg-tertiary rounded-xl border-0 text-sm"
             >View My Work</a
           >
           <a
-            href="web-portfolio/contact"
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/contact`}
             class="open-sans btn btn-soft rounded-xl border-0 bg-neutral-500 text-sm text-teal-50 dark:bg-neutral-400"
             >Contact Me</a
           >
