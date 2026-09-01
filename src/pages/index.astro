@@ -5,6 +5,7 @@ import FeaturedProject from '@/components/FeaturedProject.astro';
 import { Image } from 'astro:assets';
 import heroImage from 'public/images/hero-image.png';
 import lukslofts from 'public/images/lukslofts-website.png';
+import zumumu from 'public/images/zumumu-logo-default.png';
 ---
 
 <BaseLayout>
@@ -61,10 +62,12 @@ import lukslofts from 'public/images/lukslofts-website.png';
           url="https://www.lukslofts.com/"
         />
         <FeaturedProject
-          alt="ecommerce"
-          title="Interactive SaaS Dashboard"
-          tags="UI/UX Design"
-          description="Building an intuitive data visualization tool for business analytics, featuring custom charts and real-time data updates."
+          img={zumumu}
+          alt="zumumu"
+          title="Zumumu"
+          tags="Web Application"
+          description="A digital restaurant management platform focused on continuous system improvements, feature updates, and bug fixes."
+          url="https://integritynet.ph/work/zumumu.html"
         />
         <FeaturedProject
           alt="ecommerce"
