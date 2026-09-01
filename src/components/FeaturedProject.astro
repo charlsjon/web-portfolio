@@ -6,7 +6,7 @@ const { img, alt, title, tags, description, url } = Astro.props;
 ---
 
 <div class="flex w-full flex-col rounded-xl shadow-sm">
-  <div class="flex lg:min-h-[160px]">
+  <div class="flex rounded-t-xl lg:min-h-[160px] dark:bg-neutral-300">
     <Image src={img ?? fallback} alt={alt} class="h-full w-full rounded-t-xl" />
   </div>
   <div
