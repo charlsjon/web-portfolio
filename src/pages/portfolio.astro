@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FeaturedProject from '@/components/FeaturedProject.astro';
 import lukslofts from 'public/images/lukslofts-website.png';
 import zumumu from 'public/images/zumumu-logo-default.png';
+import pms from 'public/images/lukslofts_pms.svg';
 ---
 
 <BaseLayout>
@@ -31,12 +32,19 @@ import zumumu from 'public/images/zumumu-logo-default.png';
         url="https://integritynet.ph/work/zumumu.html"
       />
       <FeaturedProject
+        img={pms}
+        alt="lukslofts pms"
+        title="LuksLofts PMS"
+        tags="Web Application"
+        description="An in-house hotel platform that streamlines reservations, billing, reporting, and analytics while providing smart room controls and connecting hotel staff with guests through the DigiButler App."
+      />
+      <!-- <FeaturedProject
         alt="ecommerce"
         title="Brand Identity Creation"
         tags="Branding"
         description="Developed a comprehensive brand identity package for a startup, including logo design, color palette, and typography guidelines."
-      />
-      <FeaturedProject
+      /> -->
+      <!-- <FeaturedProject
         alt="ecommerce"
         title="Interactive Data Dashboard"
         tags="Data Science"
@@ -53,7 +61,7 @@ import zumumu from 'public/images/zumumu-logo-default.png';
         title="E-commerce Platform"
         tags="Web Development"
         description="Developed a scalable e-commerce platform with a focus on seamless checkout experiences and robust inventory management."
-      />
+      /> -->
     </div>
   </div>
 </BaseLayout>
